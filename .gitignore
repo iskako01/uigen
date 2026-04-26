@@ -49,3 +49,7 @@ next-env.d.ts
 # database
 /prisma/dev.db
 /prisma/dev.db-journal
+
+# hook logs
+pre-log.json
+post-log.json
