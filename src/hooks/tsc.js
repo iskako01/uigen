@@ -39,10 +39,11 @@ function runTypeCheck(configPath) {
     path.dirname(configPath)
   );
 
-  // Override to ensure no emit
+  // Override to ensure no emit; incremental is incompatible with noEmit without tsBuildInfoFile
   const compilerOptions = {
     ...parsed.options,
     noEmit: true,
+    incremental: false,
   };
 
   // Create the program
